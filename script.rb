@@ -25,7 +25,12 @@ File.foreach(csv_file) { |line| puts line }
 ################# File ####################
 puts "--- File ---"
 
-puts File.exists?('data/example.csv')
+
+Dir.glob('tmp/*').each do |file|
+  puts "delete: #{ file }"
+  File.delete(file) if File.exists?(file)
+end
+# puts File.exists?('data/example.csv')
 # File.rename("old-name.txt", "new-name.txt")
 # File.size("users.txt")
 # File.extname("users.txt")
