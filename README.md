@@ -15,7 +15,9 @@ ruby script.rb
 
 ## More info
 
-simple ruby debugger (https://docs.ruby-lang.org/en/3.0/DEBUGGER__.html or https://github.com/ruby/debug):
+### simple ruby debugger 
+* https://docs.ruby-lang.org/en/3.0/DEBUGGER__.html
+* https://github.com/ruby/debug
 
 ```ruby
 # To add a debugger to your code, start by requiring debug in your program:
@@ -26,3 +28,7 @@ def say(word)
   puts word
 end
 ```
+
+### ruby version manager (asdf)
+
+* https://github.com/asdf-vm/asdf-ruby
