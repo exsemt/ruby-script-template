@@ -9,6 +9,7 @@ end
 puts 'Gems installed and loaded!'
 
 ################## CSV #####################
+# https://ruby-doc.org/stdlib-3.1.0/libdoc/csv/rdoc/CSV.html
 puts "--- CSV read ---"
 
 require 'csv'
@@ -25,6 +26,7 @@ end
 File.foreach(csv_file) { |line| puts line }
 
 ################# File ####################
+# https://ruby-doc.org/core-3.1.0/File.html
 puts "--- File ---"
 
 Dir.glob('tmp/*').each do |file|
@@ -37,3 +39,19 @@ end
 # File.extname("users.txt")
 # File.basename("/tmp/ebook.pdf") # => "ebook.pdf"
 # File.dirname("/tmp/ebook.pdf")
+
+########## Plain net/http ################
+# https://ruby-doc.org/stdlib-3.1.0/libdoc/net/http/rdoc/Net/HTTP.html
+# examples: https://jhawthorn.github.io/curl-to-ruby/
+puts "--- net/http ---"
+
+require 'net/http'
+require 'uri'
+
+uri = URI.parse('https://raw.githubusercontent.com/exsemt/ruby-script-template/master/data/example.json')
+response = Net::HTTP.get_response(uri)
+
+puts "response code: #{response.code}"
+puts "response body: #{response.body}"
+puts 'JSON.parse'
+JSON.parse(response.body).each { |line| puts line }
