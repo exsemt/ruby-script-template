@@ -1,3 +1,5 @@
+#!/usr/bin/env ruby
+
 require 'bundler/inline'
 
 gemfile do
@@ -24,7 +26,6 @@ File.foreach(csv_file) { |line| puts line }
 
 ################# File ####################
 puts "--- File ---"
-
 
 Dir.glob('tmp/*').each do |file|
   puts "delete: #{ file }"
