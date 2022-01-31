@@ -32,3 +32,7 @@ end
 ### ruby version manager (asdf)
 
 * https://github.com/asdf-vm/asdf-ruby
+
+## Examples
+
+* curl-to-ruby: https://jhawthorn.github.io/curl-to-ruby/
